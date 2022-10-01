@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Input from "../Input";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinSection, mixinSectionHeading } from "../../GlobalStyle";
 
 export const CtaBtnsBox = styled.div`
   display: flex;
@@ -17,7 +17,9 @@ export const CtaInputsBox = styled.div`
   align-items: center;
 `;
 
-export const CtaHeading = styled.h2``;
+export const CtaHeading = styled.h2`
+  ${mixinSectionHeading}
+`;
 
 export const CtaBox = styled.section`
   ${mixinSection}

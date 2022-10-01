@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import imgVideo from "../../assets/explainer-video.png";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinSection, mixinSectionHeading } from "../../GlobalStyle";
 
-export const ExplainerVideoImg = styled.img``;
+export const ExplainerVideoImg = styled.img`
+  width: 100%;
+`;
 
 export const ExplainerVideoImgBox = styled.div`
   display: flex;
@@ -11,7 +13,9 @@ export const ExplainerVideoImgBox = styled.div`
   align-items: center;
 `;
 
-export const ExplainerVideoHeading = styled.h2``;
+export const ExplainerVideoHeading = styled.h2`
+  ${mixinSectionHeading}
+`;
 
 export const ExplainerVideoBox = styled.section`
   ${mixinSection}

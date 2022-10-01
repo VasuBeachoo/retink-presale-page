@@ -6,16 +6,27 @@ import imgAnimated from "../../assets/animated.png";
 import imgProductDemo from "../../assets/product-demo.png";
 import imgCopywriting from "../../assets/copywriting.png";
 import imgSocialMedia from "../../assets/social-media.png";
-import { mixinSection } from "../../GlobalStyle";
+import {
+  mixinSection,
+  mixinSectionHeading,
+  mixinSectionParagraph,
+} from "../../GlobalStyle";
 
 export const FeatureBlocksContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
 `;
 
-export const FeatureBlocksParagraph = styled.p``;
+export const FeatureBlocksParagraph = styled.p`
+  ${mixinSectionParagraph}
+`;
 
-export const FeatureBlocksHeading = styled.h2``;
+export const FeatureBlocksHeading = styled.h2`
+  ${mixinSectionHeading}
+`;
 
 export const FeatureBlocksBox = styled.section`
   ${mixinSection}
