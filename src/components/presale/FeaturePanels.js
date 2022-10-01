@@ -10,8 +10,10 @@ export const FeaturePanelsBox = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 2rem 6rem;
 `;
 
 const FeaturePanels = ({ className }) => {
