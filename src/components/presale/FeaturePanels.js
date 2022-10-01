@@ -58,8 +58,11 @@ const FeaturePanels = ({ className }) => {
   ];
 
   const displayFeaturePanels = (featurePanels) => {
+    let key = 1000;
+
     return featurePanels.map((panel) => (
       <FeaturePanel
+        key={key++}
         icon={panel.icon}
         heading={panel.heading}
         description={panel.description}
