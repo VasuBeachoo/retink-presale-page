@@ -26,19 +26,25 @@ export const mixinSection = css`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  padding-inline: 2rem;
 `;
 
 export const mixinSectionHeading = css`
   text-align: center;
   color: var(--Purple);
+  font-size: 1.65rem;
   font-weight: 600;
   margin: 0;
 `;
 
 export const mixinSectionParagraph = css`
   text-align: center;
+  max-width: 50rem;
   color: var(--Black);
+  font-size: 1.05rem;
   font-weight: 400;
+  line-height: 2.65ch;
+  padding-inline: 1rem;
   margin: 0;
 `;
 

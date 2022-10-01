@@ -15,9 +15,9 @@ import {
 export const FeatureBlocksContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 3rem;
 `;
 
 export const FeatureBlocksParagraph = styled.p`
@@ -28,8 +28,17 @@ export const FeatureBlocksHeading = styled.h2`
   ${mixinSectionHeading}
 `;
 
+export const FeatureBlocksTextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+`;
+
 export const FeatureBlocksBox = styled.section`
   ${mixinSection}
+  gap: 4rem;
 `;
 
 const FeatureBlocks = ({ className }) => {
@@ -104,22 +113,26 @@ const FeatureBlocks = ({ className }) => {
 
   return (
     <FeatureBlocksBox className={className}>
-      <FeatureBlocksHeading>
-        Transform your Creation Process
-      </FeatureBlocksHeading>
-      <FeatureBlocksParagraph>
-        With a new approach to ordering content, you can now stop juggling
-        multiple documents and meetings and start publishing content faster and
-        on demand
-      </FeatureBlocksParagraph>
-      <FeatureBlocksHeading>
-        Activate your business growth with RetinkContent.
-      </FeatureBlocksHeading>
-      <FeatureBlocksParagraph>
-        Save time and maintain your brand identity within your budget range or
-        sign up for affordable plans and still access multiple content services
-        like:
-      </FeatureBlocksParagraph>
+      <FeatureBlocksTextBox>
+        <FeatureBlocksHeading>
+          Transform your Creation Process
+        </FeatureBlocksHeading>
+        <FeatureBlocksParagraph>
+          With a new approach to ordering content, you can now stop juggling
+          multiple documents and meetings and start publishing content faster
+          and on demand
+        </FeatureBlocksParagraph>
+      </FeatureBlocksTextBox>
+      <FeatureBlocksTextBox>
+        <FeatureBlocksHeading>
+          Activate your business growth with RetinkContent.
+        </FeatureBlocksHeading>
+        <FeatureBlocksParagraph>
+          Save time and maintain your brand identity within your budget range or
+          sign up for affordable plans and still access multiple content
+          services like:
+        </FeatureBlocksParagraph>
+      </FeatureBlocksTextBox>
       <FeatureBlocksContainer>
         {displayFeatureBlocks(featureBlocks)}
       </FeatureBlocksContainer>

@@ -19,7 +19,7 @@ const Button = styled.button`
   user-select: none;
   font-size: 1.05rem;
   font-weight: 400;
-  border: 0.1rem solid;
+  border: 0.15rem solid;
   border-radius: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
