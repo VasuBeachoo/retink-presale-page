@@ -128,7 +128,7 @@ export const IntroBox = styled.section`
   align-items: center;
   width: 100%;
   background-color: var(--Light-purple-bg);
-  padding-block: 4rem;
+  padding-block: 3rem 4.5rem;
   padding-left: clamp(2rem, 3.5vw, 5rem);
 
   @media (max-width: 1000px) {

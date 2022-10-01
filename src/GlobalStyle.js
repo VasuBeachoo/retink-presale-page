@@ -29,12 +29,14 @@ export const mixinSection = css`
 `;
 
 export const mixinSectionHeading = css`
+  text-align: center;
   color: var(--Purple);
   font-weight: 600;
   margin: 0;
 `;
 
 export const mixinSectionParagraph = css`
+  text-align: center;
   color: var(--Black);
   font-weight: 400;
   margin: 0;

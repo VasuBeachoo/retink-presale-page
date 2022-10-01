@@ -19,6 +19,8 @@ export const ExplainerVideoHeading = styled.h2`
 
 export const ExplainerVideoBox = styled.section`
   ${mixinSection}
+  gap: 1.5rem;
+  padding: 2.5rem;
 `;
 
 const ExplainerVideo = ({ className }) => {
