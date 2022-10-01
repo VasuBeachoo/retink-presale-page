@@ -1,14 +1,27 @@
 import styled from "styled-components";
 import Input from "../Input";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
+import { mixinSection } from "../../GlobalStyle";
 
-export const CtaBtnsBox = styled.div``;
+export const CtaBtnsBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-export const CtaInputsBox = styled.div``;
+export const CtaInputsBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const CtaHeading = styled.h2``;
 
-export const CtaBox = styled.section``;
+export const CtaBox = styled.section`
+  ${mixinSection}
+`;
 
 const Cta = ({ className }) => {
   return (

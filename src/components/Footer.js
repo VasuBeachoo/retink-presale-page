@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mixinSection } from "../GlobalStyle";
 import Logo from "./Logo";
 import {
   FacebookIcon,
@@ -11,23 +12,53 @@ import {
 
 export const FooterCopyrightLink = styled.p``;
 
-export const FooterCopyright = styled.p``;
+export const FooterCopyright = styled.p`
+  margin-right: auto;
+`;
 
-export const FooterCopyrightBox = styled.div``;
+export const FooterCopyrightBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+`;
 
-export const FooterSocialIconsBox = styled.div``;
+export const FooterSocialIconsBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 export const FooterConnectHeading = styled.h3``;
 
-export const FooterConnectBox = styled.div``;
+export const FooterConnectBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
+`;
 
 export const FooterInfoText = styled.p``;
 
-export const FooterInfoBox = styled.div``;
+export const FooterInfoBox = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+`;
 
-export const FooterContainer = styled.div``;
+export const FooterContainer = styled.div`
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-auto-flow: column;
+  width: 100%;
+`;
 
-export const FooterBox = styled.footer``;
+export const FooterBox = styled.footer`
+  ${mixinSection}
+`;
 
 const Footer = ({ className }) => {
   return (

@@ -5,9 +5,19 @@ import introImg from "../../assets/avatar.png";
 
 export const IntroImg = styled.img``;
 
-export const IntroImgBox = styled.div``;
+export const IntroImgBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
-export const IntroBtnsBox = styled.div``;
+export const IntroBtnsBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 export const IntroSignUpPlaceholder = styled.span``;
 
@@ -15,7 +25,12 @@ export const IntroSignUpParagraph = styled.p``;
 
 export const IntroSignUpHeading = styled.h2``;
 
-export const IntroSignUpBox = styled.div``;
+export const IntroSignUpBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 export const IntroParagraph = styled.p``;
 
@@ -23,9 +38,19 @@ export const IntroPurpleText = styled.span``;
 
 export const IntroHeading = styled.h1``;
 
-export const IntroTextBox = styled.div``;
+export const IntroTextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
-export const IntroBox = styled.section``;
+export const IntroBox = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+`;
 
 const Intro = ({ className }) => {
   return (

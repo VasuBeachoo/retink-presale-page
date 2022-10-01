@@ -6,7 +6,13 @@ import imgInformed from "../../assets/informed.png";
 import imgReview from "../../assets/review.png";
 import imgMonitor from "../../assets/monitor.png";
 
-export const FeaturePanelsBox = styled.section``;
+export const FeaturePanelsBox = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
 
 const FeaturePanels = ({ className }) => {
   const featurePanels = [

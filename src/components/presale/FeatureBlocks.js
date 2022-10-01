@@ -6,14 +6,20 @@ import imgAnimated from "../../assets/animated.png";
 import imgProductDemo from "../../assets/product-demo.png";
 import imgCopywriting from "../../assets/copywriting.png";
 import imgSocialMedia from "../../assets/social-media.png";
+import { mixinSection } from "../../GlobalStyle";
 
-export const FeatureBlocksContainer = styled.div``;
+export const FeatureBlocksContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+`;
 
 export const FeatureBlocksParagraph = styled.p``;
 
 export const FeatureBlocksHeading = styled.h2``;
 
-export const FeatureBlocksBox = styled.section``;
+export const FeatureBlocksBox = styled.section`
+  ${mixinSection}
+`;
 
 const FeatureBlocks = ({ className }) => {
   const featureBlocks = [
