@@ -32,7 +32,8 @@ export const FooterCopyrightBox = styled.div`
   gap: 1.5rem;
   width: 100%;
   background-color: var(--Black);
-  padding: 2.5rem;
+  padding-block: 2.5rem;
+  padding-inline: clamp(2.5rem, 5vw, 5rem);
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -84,7 +85,7 @@ export const FooterInfoText = styled.p`
 export const FooterInfoBox = styled.div`
   display: grid;
   grid-template-rows: repeat(2, auto);
-  gap: 0.75rem 1rem;
+  gap: 0.85rem 1rem;
   grid-auto-flow: column;
 
   @media (max-width: 1000px) {
@@ -103,7 +104,8 @@ export const FooterContainer = styled.div`
   grid-auto-flow: column;
   width: 100%;
   background-color: var(--Gray);
-  padding: 2.5rem;
+  padding-block: 2.5rem;
+  padding-inline: clamp(2.5rem, 5vw, 5rem);
 
   @media (max-width: 1000px) {
     display: flex;

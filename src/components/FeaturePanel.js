@@ -25,6 +25,7 @@ export const FeaturePanelBox = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  user-select: none;
   border: 0.15rem solid transparent;
   border-radius: 0.75rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

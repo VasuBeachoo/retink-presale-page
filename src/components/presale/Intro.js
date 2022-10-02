@@ -26,6 +26,7 @@ export const introAvatarAnimation = keyframes`
 
 export const IntroImg = styled.img`
   width: 100%;
+  max-width: 45rem;
   animation-name: ${introAvatarAnimation};
   animation-duration: 4s;
   animation-iteration-count: infinite;
