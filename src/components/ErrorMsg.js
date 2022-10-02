@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ErrorMsgText = styled.p`
+  text-align: center;
   color: var(--Red);
   margin: 0;
 `;

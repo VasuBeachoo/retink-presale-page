@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Logo from "../Logo";
 import Input, {
   validateNameInput,
@@ -10,8 +10,25 @@ import ErrorMsg from "../ErrorMsg";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
 import introImg from "../../assets/avatar.png";
 
+export const introAvatarAnimation = keyframes`
+0% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(2.75rem);
+}
+
+100% {
+    transform: translateY(0);
+}
+`;
+
 export const IntroImg = styled.img`
   width: 100%;
+  animation-name: ${introAvatarAnimation};
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 
   @media (max-width: 1000px) {
     width: clamp(10rem, 70%, 23rem);
