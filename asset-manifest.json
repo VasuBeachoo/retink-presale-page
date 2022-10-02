@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/retink-presale-page/static/js/main.5fce2921.js",
+    "static/media/avatar.png": "/retink-presale-page/static/media/avatar.00620eb82915608c6ac8.png",
+    "static/media/product-demo.png": "/retink-presale-page/static/media/product-demo.005c47a189ee84914f0a.png",
+    "static/media/animated.png": "/retink-presale-page/static/media/animated.37e2337b92195b42e767.png",
+    "static/media/explainer-video.png": "/retink-presale-page/static/media/explainer-video.48f9ccec44808fc607c4.png",
+    "static/media/logos.png": "/retink-presale-page/static/media/logos.bdb7d4b8279bf58e75d2.png",
+    "static/media/social-media.png": "/retink-presale-page/static/media/social-media.15fe51012917ec622166.png",
+    "static/media/copywriting.png": "/retink-presale-page/static/media/copywriting.e2105edd1792b88154a0.png",
+    "static/media/blog-writing.png": "/retink-presale-page/static/media/blog-writing.a042dd611f9677e4249d.png",
+    "static/media/logo.svg": "/retink-presale-page/static/media/logo.a9bc7363394ed96efd564adc0c3b2eb6.svg",
+    "index.html": "/retink-presale-page/index.html",
+    "main.5fce2921.js.map": "/retink-presale-page/static/js/main.5fce2921.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5fce2921.js"
+  ]
+}
