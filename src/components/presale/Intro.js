@@ -1,6 +1,12 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Logo from "../Logo";
-import { NameInput, EmailInput, mixinIntroInput } from "../Inputs";
+import Input, {
+  validateNameInput,
+  validateEmailInput,
+  mixinIntroInput,
+} from "../Input";
+import ErrorMsg from "../ErrorMsg";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
 import introImg from "../../assets/avatar.png";
 
@@ -34,11 +40,11 @@ export const IntroBtnsBox = styled.div`
   }
 `;
 
-export const IntroEmailInput = styled(EmailInput)`
+export const IntroEmailInput = styled(Input)`
   ${mixinIntroInput}
 `;
 
-export const IntroNameInput = styled(NameInput)`
+export const IntroNameInput = styled(Input)`
   ${mixinIntroInput}
 `;
 
@@ -149,6 +155,20 @@ export const IntroBox = styled.section`
 `;
 
 const Intro = ({ className }) => {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [displayError, setDisplayError] = useState(false);
+
+  const handleSubmit = () => {
+    if (validateNameInput(nameInput) && validateEmailInput(emailInput)) {
+      setNameInput("");
+      setEmailInput("");
+      setDisplayError(false);
+    } else {
+      setDisplayError(true);
+    }
+  };
+
   return (
     <IntroBox className={className}>
       <IntroTextBox>
@@ -168,17 +188,26 @@ const Intro = ({ className }) => {
           <IntroSignUpHeading>Sign up for the BETA!</IntroSignUpHeading>
           <IntroSignUpParagraph>
             <IntroInputBox>
-              <IntroNameInput placeholder="Business Name" />
+              <IntroNameInput
+                placeholder="Business Name"
+                value={nameInput}
+                setValue={setNameInput}
+              />
             </IntroInputBox>{" "}
             would like a beta invite sent to{" "}
             <IntroInputBox>
-              <IntroEmailInput placeholder="@email address" />
+              <IntroEmailInput
+                placeholder="@email address"
+                value={emailInput}
+                setValue={setEmailInput}
+              />
             </IntroInputBox>{" "}
             when it's ready!
           </IntroSignUpParagraph>
         </IntroSignUpBox>
+        {displayError && <ErrorMsg msgText="Please enter valid information" />}
         <IntroBtnsBox>
-          <NotifyMeBtn />
+          <NotifyMeBtn onClick={handleSubmit} />
           <SignUpBtn />
         </IntroBtnsBox>
       </IntroTextBox>

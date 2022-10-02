@@ -9,6 +9,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --Black: #000000;
     --White: #ffffff;
     --Gray: #d0d0d0;
+    --Red: #ff0000;
   }
 
   * {

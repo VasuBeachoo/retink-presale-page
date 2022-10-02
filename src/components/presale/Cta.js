@@ -1,5 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { NameInput, EmailInput, mixinCtaInput } from "../Inputs";
+import Input, {
+  validateNameInput,
+  validateEmailInput,
+  mixinCtaInput,
+} from "../Input";
+import ErrorMsg from "../ErrorMsg";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
 import { mixinSection, mixinSectionHeading } from "../../GlobalStyle";
 
@@ -11,11 +17,11 @@ export const CtaBtnsBox = styled.div`
   gap: 1.25rem;
 `;
 
-export const CtaEmailInput = styled(EmailInput)`
+export const CtaEmailInput = styled(Input)`
   ${mixinCtaInput}
 `;
 
-export const CtaNameInput = styled(NameInput)`
+export const CtaNameInput = styled(Input)`
   ${mixinCtaInput}
 `;
 
@@ -45,15 +51,38 @@ export const CtaBox = styled.section`
 `;
 
 const Cta = ({ className }) => {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [displayError, setDisplayError] = useState(false);
+
+  const handleSubmit = () => {
+    if (validateNameInput(nameInput) && validateEmailInput(emailInput)) {
+      setNameInput("");
+      setEmailInput("");
+      setDisplayError(false);
+    } else {
+      setDisplayError(true);
+    }
+  };
+
   return (
     <CtaBox className={className}>
       <CtaHeading>Sign Up For The BETA to see more</CtaHeading>
       <CtaInputsBox>
-        <CtaNameInput placeholder="Business Name" />
-        <CtaEmailInput placeholder="Email" />
+        <CtaNameInput
+          placeholder="Business Name"
+          value={nameInput}
+          setValue={setNameInput}
+        />
+        <CtaEmailInput
+          placeholder="Email"
+          value={emailInput}
+          setValue={setEmailInput}
+        />
       </CtaInputsBox>
       <CtaBtnsBox>
-        <NotifyMeBtn />
+        {displayError && <ErrorMsg msgText="Please enter valid information" />}
+        <NotifyMeBtn onClick={handleSubmit} />
         <SignUpBtn />
       </CtaBtnsBox>
     </CtaBox>

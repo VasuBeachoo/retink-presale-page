@@ -31,8 +31,12 @@ const Button = styled.button`
   }
 `;
 
-const DefaultBtn = ({ className, btnText }) => {
-  return <Button className={className}>{btnText}</Button>;
+const DefaultBtn = ({ className, btnText, onClick }) => {
+  return (
+    <Button className={className} onClick={onClick}>
+      {btnText}
+    </Button>
+  );
 };
 
 export const NotifyMeBtn = styled(DefaultBtn).attrs({ btnText: "Notify Me" })`
