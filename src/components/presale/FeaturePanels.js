@@ -13,6 +13,7 @@ export const FeaturePanelsBox = styled.section`
   align-items: stretch;
   flex-wrap: wrap;
   gap: 2rem;
+  max-width: 100rem;
   padding: 3rem 2rem 6rem;
 `;
 

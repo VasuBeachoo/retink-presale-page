@@ -26,7 +26,7 @@ export const CtaHeading = styled.h2`
 export const CtaBox = styled.section`
   ${mixinSection}
   gap: 2rem;
-  padding: 6rem 2rem 7.5rem;
+  padding: 6rem 2rem 7.85rem;
 `;
 
 const Cta = ({ className }) => {

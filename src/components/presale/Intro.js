@@ -28,7 +28,7 @@ export const IntroBtnsBox = styled.div`
 
   @media (max-width: 700px) {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 1.25rem;
   }
 `;
@@ -129,13 +129,13 @@ export const IntroBox = styled.section`
   width: 100%;
   background-color: var(--Light-purple-bg);
   padding-block: 3rem 4.5rem;
-  padding-left: clamp(2rem, 3.5vw, 5rem);
+  padding-left: clamp(2rem, 5vw, 5rem);
 
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
-    padding-right: clamp(2rem, 3.5vw, 5rem);
+    padding-right: clamp(2rem, 5vw, 5rem);
   }
 `;
 

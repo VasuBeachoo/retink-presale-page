@@ -8,6 +8,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --Purple: #7e1cfe;
     --Black: #000000;
     --White: #ffffff;
+    --Gray: #d0d0d0;
   }
 
   * {

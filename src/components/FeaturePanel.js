@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const FeaturePanelDescription = styled.p`
   text-align: center;
-  max-width: 25rem;
-  font-size: 1.05rem;
+  max-width: 20rem;
+  font-size: 1.025rem;
   line-height: 2.75ch;
   margin: 0;
 `;
 
 export const FeaturePanelHeading = styled.h3`
   text-align: center;
-  font-size: 1.35rem;
+  max-width: 20rem;
+  font-size: 1.275rem;
   margin: 0;
 `;
 
@@ -21,7 +22,6 @@ export const FeaturePanelBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   gap: 1rem;
   border-radius: 0.75rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

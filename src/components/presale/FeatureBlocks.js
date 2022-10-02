@@ -18,6 +18,7 @@ export const FeatureBlocksContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+  max-width: 60rem;
 `;
 
 export const FeatureBlocksParagraph = styled.p`
