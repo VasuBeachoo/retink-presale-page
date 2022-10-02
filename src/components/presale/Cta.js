@@ -8,6 +8,7 @@ export const CtaBtnsBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 1.25rem;
 `;
 
 export const CtaInputsBox = styled.div`
@@ -15,6 +16,7 @@ export const CtaInputsBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 `;
 
 export const CtaHeading = styled.h2`
@@ -23,6 +25,8 @@ export const CtaHeading = styled.h2`
 
 export const CtaBox = styled.section`
   ${mixinSection}
+  gap: 2rem;
+  padding: 6rem 2rem 7.5rem;
 `;
 
 const Cta = ({ className }) => {

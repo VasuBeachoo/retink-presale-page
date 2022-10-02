@@ -4,7 +4,7 @@ export const FeaturePanelDescription = styled.p`
   text-align: center;
   max-width: 25rem;
   font-size: 1.05rem;
-  line-height: 2.65ch;
+  line-height: 2.75ch;
   margin: 0;
 `;
 

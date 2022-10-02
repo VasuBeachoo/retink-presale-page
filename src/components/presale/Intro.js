@@ -7,7 +7,7 @@ export const IntroImg = styled.img`
   width: 100%;
 
   @media (max-width: 1000px) {
-    width: clamp(20rem, 65%, 25rem);
+    width: clamp(10rem, 70%, 23rem);
   }
 `;
 
@@ -84,7 +84,7 @@ export const IntroPurpleText = styled.span`
 `;
 
 export const IntroHeading = styled.h1`
-  font-size: clamp(2rem, 5vw, 2.35rem);
+  font-size: clamp(1.5rem, 6.25vw, 2.35rem);
   margin: 1.5rem 0 0 0;
 
   @media (max-width: 1000px) {

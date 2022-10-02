@@ -43,7 +43,7 @@ export const mixinSectionParagraph = css`
   color: var(--Black);
   font-size: 1.05rem;
   font-weight: 400;
-  line-height: 2.65ch;
+  line-height: 2.75ch;
   padding-inline: 1rem;
   margin: 0;
 `;
