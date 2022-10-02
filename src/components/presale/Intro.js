@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Logo from "../Logo";
+import { NameInput, EmailInput, mixinIntroInput } from "../Inputs";
 import { NotifyMeBtn, SignUpBtn } from "../Buttons";
 import introImg from "../../assets/avatar.png";
 
@@ -33,11 +34,19 @@ export const IntroBtnsBox = styled.div`
   }
 `;
 
-export const IntroSignUpPlaceholder = styled.span`
+export const IntroEmailInput = styled(EmailInput)`
+  ${mixinIntroInput}
+`;
+
+export const IntroNameInput = styled(NameInput)`
+  ${mixinIntroInput}
+`;
+
+export const IntroInputBox = styled.span`
   display: inline-block;
   color: var(--Purple);
   border-bottom: 0.1rem solid var(--Black);
-  padding-inline: 2.5rem;
+  padding-inline: 2rem;
 `;
 
 export const IntroSignUpParagraph = styled.p`
@@ -158,10 +167,14 @@ const Intro = ({ className }) => {
         <IntroSignUpBox>
           <IntroSignUpHeading>Sign up for the BETA!</IntroSignUpHeading>
           <IntroSignUpParagraph>
-            <IntroSignUpPlaceholder>Business Name</IntroSignUpPlaceholder> would
-            like a beta invite sent to{" "}
-            <IntroSignUpPlaceholder>@email address</IntroSignUpPlaceholder> when
-            it's ready!
+            <IntroInputBox>
+              <IntroNameInput placeholder="Business Name" />
+            </IntroInputBox>{" "}
+            would like a beta invite sent to{" "}
+            <IntroInputBox>
+              <IntroEmailInput placeholder="@email address" />
+            </IntroInputBox>{" "}
+            when it's ready!
           </IntroSignUpParagraph>
         </IntroSignUpBox>
         <IntroBtnsBox>

@@ -8,6 +8,15 @@ export const EmailInput = ({ className, placeholder }) => {
   return <input className={className} type="email" placeholder={placeholder} />;
 };
 
+export const mixinIntroInput = css`
+  all: unset;
+  text-align: center;
+
+  &::placeholder {
+    color: var(--Purple);
+  }
+`;
+
 export const mixinCtaInput = css`
   all: unset;
   text-align: center;
