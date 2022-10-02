@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
-const SolidPurpleBtn = css`
+const mixinSolidPurpleBtn = css`
   border-color: var(--Purple);
   background-color: var(--Purple);
   color: var(--White);
 `;
 
-const OutlinePurpleBtn = css`
+const mixinOutlinePurpleBtn = css`
   border-color: var(--Purple);
   background-color: unset;
   color: var(--Purple);
@@ -36,19 +36,19 @@ const DefaultBtn = ({ className, btnText }) => {
 };
 
 export const NotifyMeBtn = styled(DefaultBtn).attrs({ btnText: "Notify Me" })`
-  ${SolidPurpleBtn}
+  ${mixinSolidPurpleBtn}
 
   &:hover {
-    ${OutlinePurpleBtn}
+    ${mixinOutlinePurpleBtn}
   }
 `;
 
 export const SignUpBtn = styled(DefaultBtn).attrs({
   btnText: "Sign up as a freelance partner",
 })`
-  ${OutlinePurpleBtn}
+  ${mixinOutlinePurpleBtn}
 
   &:hover {
-    ${SolidPurpleBtn}
+    ${mixinSolidPurpleBtn}
   }
 `;
